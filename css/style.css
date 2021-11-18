@@ -4,13 +4,85 @@
     box-sizing: border-box;
 }
 
-body{
-    background-color: rgb(51, 13, 87);
+/* ****HEADER**** */
+
+header{
+    text-align: center;
+    height: 7vh;
+    padding: 1vh 0;
+    background-color: blueviolet;
+    z-index: 999;
 }
 
-.container{
+.easy,.medium,.hard{
+    background-color: aqua;
+    border-radius: 2em;
+    color: white;
+    padding:5px 15px;
+    
+}
+
+/* ****MAIN**** */
+
+body{
+    background-color: rgb(51, 13, 87);
+} 
+
+main{
+    height: 97vh;
+}
+
+.container {
     width: 500px;
-    margin: 0 auto;
+    height: 500px;
+    margin: 60px auto;
     border: 2px solid white;
 }
+
+.container::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* .square {
+    float: left;
+    width: calc(100% / 8);
+    height: calc(100% / 8);
+    border: 2px solid white;
+} */
+
+.campoEasy{
+    float: left;
+    width: calc(100% / 8);
+    height: calc(100% / 8);
+    border: 2px solid white;
+    display: none;
+} 
+
+.campoMedium {
+    float: left;
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+    border: 2px solid white;
+    display: none;
+}
+
+.campoHard {
+    float: left;
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+    border: 2px solid white;
+    display: none;
+} 
+
+.active{
+    display:block;
+}
+
+.clicked-true {
+    background-color: #2ec4b6;
+}
+
+
 
